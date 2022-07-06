@@ -8,7 +8,7 @@ import { Component, EventEmitter, Input, OnInit, Output, ElementRef, ViewChild }
   <a href={{webLink}} target="_blank">
   <img class="web-img" src={{pictureLink}} alt="" />
   </a>
-  <button class="detail-btn" (click)="openContent()" (click) ="createFocus(name)">
+  <button class="detail-btn" (click)="openContent(); createFocus(name)">
     {{highlighted? 'Go Back': 'Details'}}
   </button>
   <div #col class="collapsible-content" style="display: {{display}};">
