@@ -8,7 +8,7 @@ import { Component, EventEmitter, Input, OnInit, Output, ElementRef, ViewChild }
   <a href={{webLink}} target="_blank">
   <img class="web-img" src={{pictureLink}} alt="" />
   </a>
-  <button class="detail-btn" (click)="openContent(); createFocus(name);">
+  <button class="detail-btn" (click)="openContent()" (click) ="createFocus(name)">
     {{highlighted? 'Go Back': 'Details'}}
   </button>
   <div #col class="collapsible-content" style="display: {{display}};">
@@ -98,11 +98,11 @@ import { Component, EventEmitter, Input, OnInit, Output, ElementRef, ViewChild }
     border-radius: 4px;
     margin-top: 0.5rem;
     padding: 5px 8px;
-    /* &:hover{
+    &:hover{
       box-shadow: 0px 0px 11px 5px rgb(255, 255, 255, 0.7);
       color: black;
       transition-duration: 0.4s;
-    } */
+    }
    }
    .collapsible-content{
     position: absolute;

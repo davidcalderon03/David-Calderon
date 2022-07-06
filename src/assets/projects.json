@@ -31,7 +31,7 @@
          "pictureLink": "../../assets/images/question-img.png",
          "webLink": "https://www.google.com",
          "description": "To play a game",
-         "features": ["Filler", "Filler", "Filler"],
+         "features": ["Who knows?", "Could be anything.", "Any suggestions?"],
          "dateFinished": "(projected to) August 5, 2022",
          "madeWith": ["Angular", "MongoDB", "NodeJS"]
       }
