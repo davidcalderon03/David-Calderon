@@ -1,0 +1,38 @@
+[
+      {
+         "name": "Super Metroid with C#/Unity", 
+         "pictureLink": "../../assets/images/metroid-img.png",
+         "webLink": "https://youtu.be/vgCUvcoiB9Q" ,
+         "description": "To recreate a classic video game with C# and Unity",
+         "features": ["Multiple stages and abilities to discover", "Quick action and traversal", "Various animations to replicate original game"],
+         "dateFinished": "December 15, 2021",
+         "madeWith": ["C#", "Unity"]
+      },
+      {
+         "name": "Stock Trading Website", 
+         "pictureLink": "../../assets/images/STS.png",
+         "webLink": "https://stock-trading-simulation.herokuapp.com",
+         "description": "To simulate the stock trading experience",
+         "features": ["Uses real-time values for trading", "Users can friend and trade with each other", "Inforation is saved in profile"],
+         "dateFinished": "May 15, 2022",
+         "madeWith": ["React", "MongoDB", "NodeJS"]
+      }, 
+      {
+         "name": "Personal Site (This)",
+         "pictureLink": "../../assets/images/personal-site-img.png",
+         "webLink": "./home",
+         "description": "To allow others to view my profile",
+         "features": ["Basic info about me", "Repository of my work", "Access to contact info"],
+         "dateFinished": "July 5, 2022",
+         "madeWith": ["Angular", "NodeJS"]
+      }, 
+      {
+         "name": "In Progress: Unknown", 
+         "pictureLink": "../../assets/images/question-img.png",
+         "webLink": "https://www.google.com",
+         "description": "To play a game",
+         "features": ["Filler", "Filler", "Filler"],
+         "dateFinished": "(projected to) August 5, 2022",
+         "madeWith": ["Angular", "MongoDB", "NodeJS"]
+      }
+   ]
