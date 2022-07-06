@@ -91,6 +91,7 @@ import { Component, EventEmitter, Input, OnInit, Output, ElementRef, ViewChild }
     }
    }
    .detail-btn{
+    z-index: 3;
     background-color: #8c773b;
     color: #ffffff;
     font-family: Monserrat, sans-serif;
@@ -248,7 +249,7 @@ export class SiteInfoComponent implements OnInit {
     this.btnRef.nativeElement.addEventListener("click", () => {
       this.openContent(); this.createFocus(this.name);
     });
-    this.btnRef.nativeElement.addEventListener("touchend", () => {
+    this.btnRef.nativeElement.addEventListener("touchstart", () => {
       this.openContent(); this.createFocus(this.name);
     });
   }
