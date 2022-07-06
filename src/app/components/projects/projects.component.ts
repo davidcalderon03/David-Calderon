@@ -28,6 +28,7 @@ import { HttpClient } from "@angular/common/http";
   styles: [`
   .projects-section{
     background: linear-gradient(180deg, rgba(255,255,255,0.6) 0%, rgba(188,77,4,0.53) 55%);
+    height: 100%;
   }
   .wrapper{
       max-width: 1280px;
