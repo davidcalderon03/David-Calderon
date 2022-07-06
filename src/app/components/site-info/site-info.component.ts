@@ -8,9 +8,16 @@ import { Component, EventEmitter, Input, OnInit, Output, ElementRef, ViewChild }
   <a href={{webLink}} target="_blank">
   <img class="web-img" src={{pictureLink}} alt="" />
   </a>
-  <button class="detail-btn" (click)="this.openContent()" (click)="this.createFocus(this.name)" >
+  
+  
+  <button *ngIf="this.deviceType()==='desktop'" class="detail-btn" (click)="this.openContent(); this.createFocus(this.name);" >
     {{highlighted? 'Go Back': 'Details'}}
   </button>
+  <button *ngIf="this.deviceType()!=='desktop'" class="detail-btn" (touchend)="this.openContent(); this.createFocus(this.name);" >
+    {{highlighted? 'Go Back': 'Details'}}
+  </button>
+
+  
   <div #col class="collapsible-content" style="display: {{display}};">
 
   <p #date class="collapsible-child">Date Finished: {{dateFinished}}</p>
@@ -240,5 +247,18 @@ export class SiteInfoComponent implements OnInit {
   ngOnInit(): void {
     this.element.nativeElement.style.display = 'block';
   }
+
+
+
+  public deviceType = () => {
+    const ua = navigator.userAgent;
+    if (/(tablet|ipad|playbook|silk)|(android(?!.*mobi))/i.test(ua)) {
+        return "tablet";
+    }
+    else if (/Mobile|Android|iP(hone|od)|IEMobile|BlackBerry|Kindle|Silk-Accelerated|(hpw|web)OS|Opera M(obi|ini)/.test(ua)) {
+        return "mobile";
+    }
+    return "desktop";
+};
 
 }
