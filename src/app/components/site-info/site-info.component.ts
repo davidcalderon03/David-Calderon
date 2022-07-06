@@ -242,10 +242,13 @@ export class SiteInfoComponent implements OnInit {
    }
 
   ngOnInit(): void {
+    this.element.nativeElement.style.display = 'block';
   }
   ngAfterViewInit() {
-    this.element.nativeElement.style.display = 'block';
     this.btnRef.nativeElement.addEventListener("click", () => {
+      this.openContent(); this.createFocus(this.name);
+    });
+    this.btnRef.nativeElement.addEventListener("touchend", () => {
       this.openContent(); this.createFocus(this.name);
     });
   }
