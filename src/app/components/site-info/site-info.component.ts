@@ -8,7 +8,7 @@ import { Component, EventEmitter, Input, OnInit, Output, ElementRef, ViewChild }
   <a href={{webLink}} target="_blank">
   <img class="web-img" src={{pictureLink}} alt="" />
   </a>
-  <button class="detail-btn" (click)="openContent(); createFocus(name)">
+  <button class="detail-btn" (click)="customFunction()">
     {{highlighted? 'Go Back': 'Details'}}
   </button>
   <div #col class="collapsible-content" style="display: {{display}};">
@@ -123,6 +123,11 @@ export class SiteInfoComponent implements OnInit {
   public prevLeft = 0;
   public prevTop = 0;
   public prevScroll = 0;
+
+  public customFunction(){  
+    this.openContent(); 
+    this.createFocus(this.name);
+  }
 
   public openContent() {
     if(this.display === 'none'){
