@@ -235,6 +235,8 @@ export class SiteInfoComponent implements OnInit {
       setTimeout( () => { //let the parent component know the image has moved back after the 1s transition
         this.focusEvent.emit(name);
         this.element.nativeElement.attributeStyleMap.clear();
+        this.element.nativeElement.style.display = 'block'; 
+        this.collapsible.nativeElement.style.display = 'none';
       }, 1000);
     }
   }
