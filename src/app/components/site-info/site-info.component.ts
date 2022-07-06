@@ -181,9 +181,10 @@ export class SiteInfoComponent implements OnInit {
       this.featuresRef.nativeElement.attributeStyleMap.clear();
       this.toolsRef.nativeElement.attributeStyleMap.clear();
       this.display = 'none';
-      if(window.innerWidth < 787) {
-        window.location.reload();
-      }
+      this.dateRef.nativeElement.style.display = 'none';
+      this.purposeRef.nativeElement.style.display = 'none';
+      this.featuresRef.nativeElement.style.display = 'none';
+      this.toolsRef.nativeElement.style.display = 'none';
     }
   }
 
@@ -205,7 +206,8 @@ export class SiteInfoComponent implements OnInit {
   @Input() public dateFinished = "";
 
   @Output() focusEvent = new EventEmitter<string>();
-  createFocus(name: string) {
+
+  public createFocus(name: string) {
     var top = this.element.nativeElement.getBoundingClientRect().top;
     var left = this.element.nativeElement.getBoundingClientRect().left;
     left += window.scrollX;
