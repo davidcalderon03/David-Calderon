@@ -9,7 +9,7 @@ import { Component, EventEmitter, Input, OnInit, Output, ElementRef, ViewChild }
   <img class="web-img" src={{pictureLink}} alt="" />
   </a>
     
-  <button #btn class="detail-btn">
+  <button #btn class="detail-btn" (click)="this.openContent()" (click)="this.createFocus(this.name)">
     {{highlighted? 'Go Back': 'Details'}}
   </button>
 
@@ -235,7 +235,6 @@ export class SiteInfoComponent implements OnInit {
       setTimeout( () => { //let the parent component know the image has moved back after the 1s transition
         this.focusEvent.emit(name);
         this.element.nativeElement.attributeStyleMap.clear();
-        this.element.nativeElement.style.display = 'block';
       }, 1000);
     }
   }
@@ -246,12 +245,6 @@ export class SiteInfoComponent implements OnInit {
     this.element.nativeElement.style.display = 'block';
   }
   ngAfterViewInit() {
-    this.btnRef.nativeElement.addEventListener("click", () => {
-      this.openContent(); this.createFocus(this.name);
-    });
-    this.btnRef.nativeElement.addEventListener("touchstart", () => {
-      this.openContent(); this.createFocus(this.name);
-    });
   }
 
 }
