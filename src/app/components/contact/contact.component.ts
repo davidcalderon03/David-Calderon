@@ -10,22 +10,22 @@ import { Component, OnInit } from '@angular/core';
         <div class="flex-container">
           <img src="../../assets/images/outlook-img.png" alt="">
           <h2>Email</h2>
-          <a href="">
+          <a href="mailto:davidcalderon03@hotmail.com" target="_blank">
             <h5>davidcalderon03@hotmail.com</h5>
           </a>
         </div>  
         <div class="flex-container">
           <img src="../../assets/images/github-img.png" alt="">
           <h2>Github</h2>
-          <a href="">
+          <a href="https://github.com/davidcalderon03" target="_blank">
             <h5>github.com/davidcalderon03</h5>
           </a>
         </div>
         <div class="flex-container">
-          <img src="../../assets/images/insta-img.png" alt="">
-          <h2>Instagram</h2>
-          <a href="">
-            <h5>david_calderon_1126</h5>
+          <img src="../../assets/images/linkedin-img.png" alt="">
+          <h2>LinkedIn</h2>
+          <a href="https://www.linkedin.com/in/davidcalderon03" target="_blank">
+            <h5>www.linkedin.com/in/davidcalderon03</h5>
           </a>
         </div>
       </div>
@@ -70,6 +70,10 @@ import { Component, OnInit } from '@angular/core';
       text-decoration: none;
       color: rgb(255, 255, 255, 0.8);
     }
+  }
+  h5:hover{
+    transition-duration: 0.2s; 
+    color: #4a6ea8;
   }
   `]
 })

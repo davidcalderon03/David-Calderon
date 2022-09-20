@@ -32,7 +32,7 @@
          "webLink": "https://www.google.com",
          "description": "Finding a new way to allow for interactions between friends",
          "features": ["Perhaps a blog section?", "Perhaps a secret messages section?", "Basic DMs?"],
-         "dateFinished": "(projected to) August 5, 2022",
+         "dateFinished": "(projected to) December 2022",
          "madeWith": ["Angular", "MongoDB", "NodeJS"]
       }
    ]
