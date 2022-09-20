@@ -10,7 +10,7 @@ import { HttpClient } from "@angular/common/http";
   <div class="projects">
 
   <div *ngFor="let project of projects">
-  <app-site-info [ngStyle]="{'visibility': (!focus || focusName===project.name)? 'visible': 'hidden' }                 " (focusEvent)="createFocus($event)"
+  <app-site-info [ngStyle]="{'visibility': (!focus || focusName===project.name)? 'visible': 'hidden' }" (focusEvent)="createFocus($event)"
   [highlighted]="focus && focusName === project.name"
   [name]="project.name" 
   [pictureLink]="project.pictureLink"

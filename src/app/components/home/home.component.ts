@@ -32,7 +32,7 @@ import { Component, OnInit } from '@angular/core';
       max-width: 1280px;
       text-align: center;
       margin: 0 auto;
-      padding: 2rem 10px 4rem;;
+      padding: 2rem 10px 4rem;
       /* border: 3px dotted red; */
     }
     .main-content{
