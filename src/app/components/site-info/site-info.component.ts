@@ -179,19 +179,11 @@ export class SiteInfoComponent implements OnInit {
         this.toolsRef.nativeElement.style.transitionDuration = "1s";
       }, 2900);
     } else { 
-      // this.dateRef.nativeElement.attributeStyleMap.clear();
-      // this.purposeRef.nativeElement.attributeStyleMap.clear();
-      // this.featuresRef.nativeElement.attributeStyleMap.clear();
-      // this.toolsRef.nativeElement.attributeStyleMap.clear();
       this.dateRef.nativeElement.style = {};
       this.purposeRef.nativeElement.style = {};
       this.featuresRef.nativeElement.style = {};
       this.toolsRef.nativeElement.style = {};
       this.display = 'none';
-      this.dateRef.nativeElement.style.display = 'none';
-      this.purposeRef.nativeElement.style.display = 'none';
-      this.featuresRef.nativeElement.style.display = 'none';
-      this.toolsRef.nativeElement.style.display = 'none';
     }
   }
 
@@ -226,14 +218,23 @@ export class SiteInfoComponent implements OnInit {
       this.focusEvent.emit(name);
       if(window.innerWidth > 787) {
         this.prevScroll = window.scrollY;
-        window.scrollTo(0, 0);
-        this.element.nativeElement.style.transform = "translate(" + (-1* left + 50) + "px," +  (-1* top + 350) + "px)";
+        window.scrollTo(0, 740 - window.innerHeight);
+        this.element.nativeElement.style.transform = "translate(" + (-1* left + 10) + "px," +  (-1* top + 350) + "px)";
+        this.element.nativeElement.style.transitionDuration = "1s";
+      } else {
+        this.prevScroll = window.scrollY;
+        window.scrollTo(0, 350);
+        this.element.nativeElement.style.transform = "translate(0px," +  (-1* top + 400) + "px)";
         this.element.nativeElement.style.transitionDuration = "1s";
       }
     } 
     else {
       if(this.element.nativeElement.style.transform) {
-      this.element.nativeElement.style.transform = "translate(" + (this.prevLeft - 50) + "px, " +  (this.prevTop - 350) +   "px)";
+        if(window.innerWidth > 787) {
+          this.element.nativeElement.style.transform = "translate(" + (this.prevLeft - 10) + "px, " +  (this.prevTop - 350) +   "px)";
+        } else {
+          this.element.nativeElement.style.transform = "translate(0px, " +  (this.prevTop - 400) +   "px)";
+        }
       window.scrollTo(0, this.prevScroll);
       }
       setTimeout( () => { //let the parent component know the image has moved back after the 1s transition

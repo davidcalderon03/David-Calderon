@@ -3,7 +3,7 @@
          "name": "Super Metroid with C#/Unity", 
          "pictureLink": "../../assets/images/metroid-img.png",
          "webLink": "https://youtu.be/vgCUvcoiB9Q" ,
-         "description": "To recreate a classic video game with C# and Unity",
+         "description": "To recreate a classic video game",
          "features": ["Multiple stages and abilities to discover", "Quick action and traversal", "Various animations to replicate original game"],
          "dateFinished": "December 15, 2021",
          "madeWith": ["C#", "Unity"]
@@ -30,7 +30,7 @@
          "name": "Social Media Website (In Progress)", 
          "pictureLink": "../../assets/images/question-img.png",
          "webLink": "https://www.google.com",
-         "description": "Finding a new way to allow for interactions between friends",
+         "description": "Find new way of friend interaction",
          "features": ["Perhaps a blog section?", "Perhaps a secret messages section?", "Basic DMs?"],
          "dateFinished": "(projected to) December 2022",
          "madeWith": ["Angular", "MongoDB", "NodeJS"]
