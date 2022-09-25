@@ -9,7 +9,7 @@ import { Component, EventEmitter, Input, OnInit, Output, ElementRef, ViewChild }
   <img class="web-img" src={{pictureLink}} alt="" />
   </a>
     
-  <button #btn class="detail-btn" (touch)="this.openContent(); this.createFocus(this.name);">
+  <button #btn class="detail-btn" (touchstart)="this.openContent(); this.createFocus(this.name);">
     {{highlighted? 'Go Back': 'Details'}}
   </button>
 
