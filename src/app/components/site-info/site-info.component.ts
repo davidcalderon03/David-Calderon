@@ -179,10 +179,14 @@ export class SiteInfoComponent implements OnInit {
         this.toolsRef.nativeElement.style.transitionDuration = "1s";
       }, 2900);
     } else { 
-      this.dateRef.nativeElement.attributeStyleMap.clear();
-      this.purposeRef.nativeElement.attributeStyleMap.clear();
-      this.featuresRef.nativeElement.attributeStyleMap.clear();
-      this.toolsRef.nativeElement.attributeStyleMap.clear();
+      // this.dateRef.nativeElement.attributeStyleMap.clear();
+      // this.purposeRef.nativeElement.attributeStyleMap.clear();
+      // this.featuresRef.nativeElement.attributeStyleMap.clear();
+      // this.toolsRef.nativeElement.attributeStyleMap.clear();
+      this.dateRef.nativeElement.style = {};
+      this.purposeRef.nativeElement.style = {};
+      this.featuresRef.nativeElement.style = {};
+      this.toolsRef.nativeElement.style = {};
       this.display = 'none';
       this.dateRef.nativeElement.style.display = 'none';
       this.purposeRef.nativeElement.style.display = 'none';
@@ -191,7 +195,7 @@ export class SiteInfoComponent implements OnInit {
     }
   }
 
-  @ViewChild("col", {read: ElementRef}) collapsible: ElementRef;
+  @ViewChild("col", {read: ElementRef}) collapsible: ElementRef; 
 
   @ViewChild("date", {read: ElementRef}) dateRef: ElementRef;
   @ViewChild("purpose", {read: ElementRef}) purposeRef: ElementRef;
